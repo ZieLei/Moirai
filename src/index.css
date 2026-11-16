@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: 'Cinzel', 'Trajan Pro', serif;
+  --font-body: 'Cormorant Garamond', Georgia, serif;
+  --color-marble: #f6f1e7;
+  --color-marble-deep: #ebe3d2;
+  --color-aegean: #1c3d5a;
+  --color-aegean-dark: #12293d;
+  --color-gold: #b8893a;
+  --color-terracotta: #a8472e;
+  --color-ink: #2a2118;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.15rem;
+  background: var(--color-marble);
+  color: var(--color-ink);
+}
+
+/* Greek key (meander) band */
+.meander {
+  height: 22px;
+  background-color: var(--color-aegean);
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='44' height='22' viewBox='0 0 44 22'%3E%3Cpath d='M2 20V2h40v18H14V8h16v6H20' fill='none' stroke='%23d9b564' stroke-width='2.5' stroke-linecap='square'/%3E%3C/svg%3E");
+  background-size: 44px 22px;
+  background-repeat: repeat-x;
+}
+
+.marble {
+  background:
+    radial-gradient(circle at 20% 10%, #fffdf8 0, transparent 55%),
+    linear-gradient(135deg, var(--color-marble), var(--color-marble-deep));
+}
+
+.panel {
+  position: relative;
+  background: #fffdf8;
+  border: 1px solid var(--color-gold);
+  outline: 1px solid var(--color-gold);
+  outline-offset: 5px;
+  padding: 1.75rem;
+  box-shadow: 0 10px 30px -12px rgb(42 33 24 / .35);
+}
+
+.field {
+  width: 100%;
+  background: var(--color-marble);
+  border: 1px solid #c9b88f;
+  padding: .55rem .75rem;
+  color: var(--color-ink);
+}
+.field:focus { outline: 2px solid var(--color-gold); outline-offset: 1px; }
+
+.btn {
+  font-family: var(--font-display);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: .7rem 1.4rem;
+  color: var(--color-marble);
+  background: linear-gradient(var(--color-aegean), var(--color-aegean-dark));
+  border: 1px solid var(--color-gold);
+  cursor: pointer;
+}
+.btn:hover { background: var(--color-terracotta); }
